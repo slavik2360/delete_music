@@ -74,7 +74,8 @@ class SongAdmin(admin.ModelAdmin):
     readonly_fields: tuple[str, ...] = (
         'duration',
         'times_played',
-        'is_favorite'
+        'is_favorite',
+        'datetime_deleted'
     )
 
 

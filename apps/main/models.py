@@ -164,7 +164,7 @@ class Genre(models.Model):
         ordering = ('-id',)
 
 
-class Song(models.Model):
+class Song(AbsctractDateTime):
     """Song model."""
 
     title = models.CharField(

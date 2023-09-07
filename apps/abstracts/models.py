@@ -1,6 +1,6 @@
 # Django
 from django.db import models
-
+from django.utils import timezone
 
 class AbsctractDateTime(models.Model):
     """
@@ -19,6 +19,11 @@ class AbsctractDateTime(models.Model):
         null=True,
         blank=True
     )
+
+    # удаление песни 
+    def delete(self, using=None, keep_parents=False):
+        self.datetime_deleted = timezone.now()
+        self.save()
 
     class Meta:
         abstract = True
